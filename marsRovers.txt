@@ -1,0 +1,75 @@
+prontera,150,150,5	script	Rovers	550,{
+
+mes "Input the plateu's size x:"; next;
+input @p1;
+mes "Input the plateu's size x:"; next;
+input @p2;
+mes "Input the 'x' first rover's position: "; next;
+input @x1;
+mes "Input the 'y' first rover's position: "; next;
+input @y1;
+mes "Input the 'direction' first rover's position: "; next;
+input @d1$;
+mes "Input the 'move' first rover's position: "; next;
+input @mov1$;
+
+mes "Input the 'x' second rover's position: "; next;
+input @x2;
+mes "Input the 'y' second rover's position: "; next;
+input @y2;
+mes "Input the 'direction' second rover's position: "; next;
+input @d2$;
+mes "Input the 'move' second rover's position: "; next;
+input @mov2$;
+
+for(set .@c,0; .@c<= getstrlen(@mov1$); .@c++){
+    if(charat(@mov1$,.@c)=="L"){
+        if(@d1$=="N")@d1$="W";
+        else if(@d1$=="E")@d1$="N";
+        else if(@d1$=="S")@d1$="E";
+        else if(@d1$=="W")@d1$="S";
+    }
+    else if(charat(@mov1$,.@c)=="R"){
+        if(@d1$=="N")@d1$="E";
+        else if(@d1$=="E")@d1$="S";
+        else if(@d1$=="S")@d1$="W";
+        else if(@d1$=="W")@d1$="N";
+    }
+    else if(charat(@mov1$,.@c)=="M"){
+        if(@d1$=="N")@y1=@y1+1;
+        else if(@d1$=="E")@x1=@x1+1;
+        else if(@d1$=="S")@y1=@y1-1;
+        else if(@d1$=="W")@x1=@x1-1;
+    }
+}
+
+for(set .@c,0; .@c<= getstrlen(@mov2$); .@c++){
+    if(charat(@mov2$,.@c)=="L"){
+        if(@d2$=="N")@d2$="W";
+        else if(@d2$=="E")@d2$="N";
+        else if(@d2$=="S")@d2$="E";
+        else if(@d2$=="W")@d2$="S";
+    }
+    else if(charat(@mov2$,.@c)=="R"){
+        if(@d2$=="N")@d2$="E";
+        else if(@d2$=="E")@d2$="S";
+        else if(@d2$=="S")@d2$="W";
+        else if(@d2$=="W")@d2$="N";
+    }
+    else if(charat(@mov2$,.@c)=="M"){
+        if(@d2$=="N")@y2=@y2+1;
+		    else if(@d2$=="E")@x2=@x2+1;
+        else if(@d2$=="S")@y2=@y2-1;
+        else if(@d2$=="W")@x2=@x2-1;
+    }
+}
+if(@x1>@p1 || @x2>@p1 || @y1>@p2 || @y2>@p2 || @x1<0 || @x2<0 || @y1<0 || @y2<0){
+	mes "Voce fez um movimento impossivel!";
+	close;
+}
+else {
+	mes "1 rover = "+@x1+" "+@y1+" "+@d1$;
+	mes "2 rover = "+@x2+" "+@y2+" "+@d2$;
+}
+close;
+}
