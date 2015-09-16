@@ -32,6 +32,16 @@ Pra facilitar a NASA colocou esses robôs aceitando apenas 3 comandos, represent
   
 =============================================================================================================================
 
+Existem 2 maneiras para poder testar o programa marsRovers.c , são elas:
+
+1- Através de uma IDE, recomendo utilizar a CodeBlocks, pode ser baixado atrávs do link:
+http://www.codeblocks.org/downloads
+
+2- Ou pode executar compilando o programa e executando através de linhas de comandos direto do seu Sistema Operacional. Pra isso siga o passo-a-passo deste link:
+http://fig.if.usp.br/~esdobay/c/gcc.html#gccwin
+
+============================================================================================================================
+  
 Pra utilizar o programa é simples basta preencher com os valores na seguinte ordem:
 
   1- Input the plateu's size :  (Coloque o tamanho da área em que os robôs vão movimentar)
