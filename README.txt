@@ -36,15 +36,21 @@ Pra utilizar o programa é simples basta preencher com os valores na seguinte or
 
   1- Input the plateu's size :  (Coloque o tamanho da área em que os robôs vão movimentar)
     Ex: "5 5" (Colque o primeiro numero que representa 'X' seguido por um espaço após o número que reprenta 'Y'. Sem as aspas)
+    
   2- Input the  first rover's position:  (Indique a posição inicial do primeiro robô)
     Ex: "1 2 N"  (Primeiro o número que reprenseta 'X' seguido por um espaço, depois o número que representa 'Y', mais um espaço, após a letra que representa a 'direção'. Sem aspas).
+ 
   3- Input the  first rover's move:  (Digite a sequência de comandos desejada para o primeiro robô)
     Ex: "LMLMLMLMM" (Basta digitar as letras que representa os comandos disponiveis seguidas. *Obs: Apenas as letras "L,R,M" são comandos válidos. Sem aspas).
+ 
   4- Input the  second rover's position: (Indique a posição inicial do segundo robô)
     Ex: "3 3 E"  (Primeiro o número que reprenseta 'X' seguido por um espaço, depois o número que representa 'Y', mais um espaço, após a letra que representa a 'direção'. Sem aspas).
+
   5- Input the  second rover's move:  (Digite a sequência de comandos desejada para o segundo robô)
     Ex: "MMRMMRMRRM" (Basta digitar as letras que representa os comandos disponiveis seguidas. *Obs: Apenas as letras "L,R,M" são comandos válidos. Sem aspas).
 
 =============================================================================================================================
 Após digitar todos os valores, o programa irá executar os movimentos do primeiro e segundo robôs respectivamente.
 Caso o robô mova pra uma área fora da área delimitada o programa irá informar que o movimento não foi correto.
+
+============================================================================================================================
